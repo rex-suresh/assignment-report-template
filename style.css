@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  width: 1000px;
+  margin: 100 auto;
+  font-family: sans-serif;
+}
+
+@layer components {
+  .t-row {
+    @apply bg-[#f6f6f6] border-2 p-5 rounded-lg flex flex-wrap gap-5;
+  }
+
+  .t {
+    @apply p-20 flex flex-col gap-5;
+  }
+
+  .header {
+    @apply font-bold;
+  }
+
+  .report {
+    @apply bg-white rounded-md w-full h-[500] hidden;
+  }
+
+  .assignment-list {
+    @apply p-4 flex flex-col gap-1 my-5 border-r-2 overflow-y-scroll min-w-40;
+  }
+
+  .assignment {
+    @apply hover:font-semibold;
+  }
+
+  .report-section {
+    @apply w-full flex flex-col p-4 gap-4;
+  }
+
+  .report-section > .tabs {
+    @apply flex;
+  }
+
+  .tabs > .tab {
+    @apply border-b-2 hover:border-black px-4 py-1;
+  }
+
+  .report-detail {
+    @apply overflow-y-scroll border-2 rounded-lg h-full;
+  }
+}
+
+.t-row > div:nth-child(1) {
+  width: 30%;
+}
+
+.visible {
+  display: flex;
+}
+
+.disable {
+  opacity: 0.5;
+}
+
+.active {
+  opacity: 1;
+}

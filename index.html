@@ -1,0 +1,44 @@
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css" />
+    <script>
+      const clic = () => {
+        const x = document.getElementById("apple");
+        x.className = x.classList + " visible";
+      };
+    </script>
+  </head>
+  <body>
+    <div class="t">
+      <div class="t-row header">
+        <div>Github ID</div>
+        <div>Test Progress</div>
+      </div>
+      <div class="t-row" onclick="clic()">
+        <div>Suresh</div>
+        <div>0/10</div>
+        <div id="apple" class="report">
+          <div class="assignment-list">
+            <div class="assignment">01_factorial.js</div>
+            <div class="assignment">02_primes.js</div>
+            <div class="assignment">03_leap_year.js</div>
+            <div class="assignment">04_find_index.js</div>
+          </div>
+          <div class="report-section">
+            <div class="tabs">
+              <div class="tab">Tests</div>
+              <div class="tab">Lint</div>
+              <div class="tab">Code</div>
+            </div>
+            <div class="report-detail"></div>
+          </div>
+        </div>
+      </div>
+      <div class="t-row">
+        <div>Ramesh</div>
+        <div>10/10</div>
+      </div>
+    </div>
+  </body>
+</html>
